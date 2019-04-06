@@ -6,8 +6,6 @@ Deployed using Heroku at [Austin-Graffiti-Art](https://austin-graffiti-art.herok
 
 A paragraph used to introduce interested parties to the project and needs to include one or more screenshots.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
 
 ### Tech Used
 
