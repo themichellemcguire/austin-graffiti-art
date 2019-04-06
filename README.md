@@ -1,6 +1,6 @@
 # Austin Graffiti Art
 
-Deployed using Heroku at [Austin-Graffiti-Art](https://austin-graffiti-art.herokuapp.com)
+Deployed using Heroku at [Austin-Graffiti-Art](https://austin-graffiti-art.herokuapp.com).
 
 ### Intro
 
