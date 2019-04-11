@@ -1,14 +1,20 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Route, Switch, Redirect } from 'react-router-dom';
+import {BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import SignupPage from '../SignupPage/SignupPage';
 import LoginPage from '../LoginPage/LoginPage';
 import userService from '../../utils/userService';
+import NavBar from '../../components/NavBar/NavBar';
+import Gallery from '../Gallery/Gallery';
+import NewImage from '../NewImage/NewImage';
 
 
 class App extends Component {
   constructor() {
     super();
+    this.state = {
+      gallery: []
+    }
   }
 
 
@@ -31,6 +37,10 @@ class App extends Component {
     return (
       <div>
         <header className='header-footer'>Austin Graffiti Art</header>
+        <Router>
+          <NavBar />
+          {/* <Gallery gallery={[]}/>
+          <NewImage /> */}
         <Switch>
           <Route exact path='/signup' render={({ history }) => 
             <SignupPage
@@ -45,6 +55,7 @@ class App extends Component {
             />
           }/>              
         </Switch>
+        </Router>
       </div>
     );
   }
