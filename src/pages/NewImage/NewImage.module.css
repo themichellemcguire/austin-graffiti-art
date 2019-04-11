@@ -1,3 +1,5 @@
-body {
+.card {
     background: rgb(104, 80, 161);
+    margin-top: 100px;
+    padding-top: 200px;
   }

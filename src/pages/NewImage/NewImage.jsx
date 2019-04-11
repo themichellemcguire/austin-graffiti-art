@@ -1,20 +1,28 @@
-import React from 'react';
-import styles from './NewImage.module.css';
+import React, {Component} from 'react';
+// import styles from './NewImage.module.css';
 
-function NewImage(props) {
-    const handler = props.handleSubmit
-    return (
-        <form onSubmit={handler} className={styles.NewImage}>
-            <div class="card" >
-            <img class="card-img-top" src=".../100px180/" alt="Card cap"></img>
-            <div class="card-body">
-                <h5 class="card-title" placeholder="your art title">New Graffiti Art</h5>
-                <p class="card-text" placeholder="location description"></p>
-                <a href="/gallery" class="btn btn-primary">Go somewhere</a>
+class NewImage extends Component {
+// function NewImage(props) {
+    // const handler = props.handleSubmit
+    fileSelectedHandler = event => {
+        console.log(event);
+    }
+    render() {
+        return (
+            <div className="card" >
+            <input type="file" onChange={this.fileSelectedHandler} />
+            <div className="card-body">
+                <h5 className="card-title" placeholder="your art title">New Graffiti Art</h5>
+                <p className="card-text" placeholder="location description"></p>
+                <a href="/gallery" className="btn btn-primary">Go somewhere</a>
             </div>
             </div>
-        </form>
-    )
+        )
+    }
 }
 
 export default NewImage
+
+{/* <form onSubmit={handler} className={styles.NewImage}>
+</form> */}
+

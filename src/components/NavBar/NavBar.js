@@ -4,7 +4,7 @@ import './NavBar.module.css';
 
 const NavBar = (props) => {
   let nav = props.user ?
-    <div className='NavBar'>
+    <div className='NavBar mb-5'>
       <Link to='' className='NavBar-link' onClick={props.handleLogout}>LOG OUT</Link>
     </div>
     :
@@ -13,8 +13,8 @@ const NavBar = (props) => {
     </div>;
 
   return (
-    <div className='NavBar'>
-      <nav class="navbar fixed-top navbar-light bg-light">
+    <div className='NavBar mb-5'>
+      <nav className="navbar fixed-top navbar-light bg-light">
       {nav}
       </nav>
     </div>
