@@ -4,23 +4,25 @@ Deployed using Heroku at [Austin-Graffiti-Art](https://austin-graffiti-art.herok
 
 ### Intro
 
-A paragraph used to introduce interested parties to the project and needs to include one or more screenshots.
+#See It. Snap it. Share it.
+Austin Graffiti Art is a way for our commnunity to share where some great Austin art is located.
 
 
 ### Tech Used
 
-A list of all technologies, libraries, APIs, etc. used in the project.
+MERN stack
 
 ### Planning
 
-Links to the project's planning (Trello board) and the deployed app on Heroku.
+[Trello Board](https://trello.com/b/s5L2UXQ9/austin-graffiti-art)
+[Cloudinary API](https://cloudinary.com/documentation/image_upload_api_reference)
 
 ### Unsolved Challenges
 
-List any unsolved issues.
+API is not integrated to it's fullest potential.
 
 
 ### Future Enhancements
 
-Identify future features and enhancements planned for the project.
+Integrate a map api to use pinpoint location of where the graffiti art is located.
 
