@@ -23,6 +23,3 @@ class NewImage extends Component {
 
 export default NewImage
 
-{/* <form onSubmit={handler} className={styles.NewImage}>
-</form> */}
-
