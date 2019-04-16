@@ -7,10 +7,10 @@ import NavBar from "../../components/NavBar/NavBar";
 import Gallery from "../Gallery/Gallery";
 import NewArt from "../NewArt/NewArt";
 import Notifications, { notify } from 'react-notify-toast'
-import Spinner from '../../components/Spinner'
+// import Spinner from '../../components/Spinner'
 import Images from '../../components/Images'
 import Buttons from '../../components/Buttons'
-import WakeUp from '../../components/WakeUp'
+// import WakeUp from '../../components/WakeUp'
 import { API_URL } from '../../components/config'
 
 const toastColor = { 
@@ -99,12 +99,13 @@ class App extends Component {
         images
       })
     })
-    .catch(err => {
-      err.json().then(e => {
-        this.toast(e.message, 'custom', 2000, toastColor)
-        this.setState({ uploading: false })
-      })
-    })
+    // .catch(err => {
+    //   console.log(err);
+    //   err.json().then(e => {
+    //     this.toast(e.message, 'custom', 2000, toastColor)
+    //     this.setState({ uploading: false })
+    //   })
+    // })
   }
 
   filter = id => {
@@ -122,14 +123,14 @@ class App extends Component {
   /*--- Lifecycle Methods ---*/
 
   render() {
-    const { loading, uploading, images } = this.state
+    const { /*loading, uploading,*/ images } = this.state
 
     const content = () => {
       switch(true) {
-        case loading:
-          return <WakeUp />
-        case uploading:
-          return <Spinner />
+        // case loading:
+        //   return <WakeUp />
+        // case uploading:
+        //   return <Spinner />
         case images.length > 0:
           return <Images 
                   images={images} 
@@ -143,13 +144,14 @@ class App extends Component {
 
     return (
       <div className='container'>
-        <Notifications />
+        <Router>
+        <Notifications/>
+
+          <NavBar>
         <div className='buttons'>
           {content()}
         </div>
-        <header className="header-footer">Austin Graffiti Art</header>
-        <Router>
-          <NavBar />
+        <Switch>
           <Route
             exact
             path="/gallery"
@@ -160,7 +162,6 @@ class App extends Component {
             path="/newart/:id"
             render={() => <NewArt />}
           />
-          <Switch>
             <Route
               exact
               path="/login"
@@ -171,8 +172,8 @@ class App extends Component {
                 />
               )}
             />
-            
           </Switch>
+          </NavBar>
         </Router>
       </div>
     );

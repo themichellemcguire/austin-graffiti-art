@@ -1,7 +1,9 @@
 body {
-    background: rgb(104, 80, 161);
+  margin-top: 100px;  
+  background: rgb(104, 80, 161);
   }
 
   .card {
     margin-top: 100px;
+    color: bisque;
   }

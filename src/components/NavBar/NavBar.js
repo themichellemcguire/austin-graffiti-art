@@ -16,7 +16,9 @@ const NavBar = (props) => {
     <div className='NavBar mb-5'>
       <nav className="navbar fixed-top navbar-light bg-light">
       {nav}
+      <header className="header-footer">Austin Graffiti Art</header>
       </nav>
+      {props.children}
     </div>
   );
 };
