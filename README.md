@@ -20,6 +20,7 @@ MERN stack
 ### Unsolved Challenges
 
 API is not integrated to it's fullest potential.
+Getting my database to communicate with my app.
 
 
 ### Future Enhancements
